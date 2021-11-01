@@ -1,18 +1,12 @@
 <script>
-	let current = 'home';
+	import { page } from '$app/stores';
 </script>
 
 <nav>
 	<ul>
-		<li class:selected={current === 'home'} on:click={() => (current = 'home')}>
-			<a href="/">Home</a>
-		</li>
-		<li class:selected={current === 'blog'} on:click={() => (current = 'blog')}>
-			<a href="/blog">Blog</a>
-		</li>
-		<li class:selected={current === 'about'} on:click={() => (current = 'about')}>
-			<a href="/about">About</a>
-		</li>
+		<li class:selected={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
+		<li class:selected={$page.path === '/blog'}><a sveltekit:prefetch href="/blog">Blog</a></li>
+		<li class:selected={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 	</ul>
 </nav>
 
