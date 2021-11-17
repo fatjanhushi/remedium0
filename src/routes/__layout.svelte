@@ -5,6 +5,9 @@
 <div class="container">
 	<Header />
 	<slot />
+	<footer>
+		<p>Footer</p>
+	</footer>
 </div>
 
 <style>
@@ -12,5 +15,8 @@
 		max-width: 70rem;
 		margin-inline: auto;
 		background: red;
+	}
+	footer {
+		background-color: blueviolet;
 	}
 </style>
