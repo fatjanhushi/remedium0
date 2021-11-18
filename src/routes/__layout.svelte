@@ -1,10 +1,10 @@
 <script>
-	import Header from '../components/Header.svelte';
-	export let title;
+	import Header from '../components/Header.svelte'
+	export let titulli
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{titulli}</title>
 </svelte:head>
 
 <div class="container">

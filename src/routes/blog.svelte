@@ -1,4 +1,4 @@
 <script>
-	import { title } from './__layout.svelte';
-	title = 'Blog Page';
 </script>
+
+<h1>Blog page</h1>
