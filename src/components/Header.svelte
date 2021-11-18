@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<div><img src="logo-Remedium.jpg" alt="" /></div>
+	<div><img src="logo-Remedium.jpg" alt="Remedium Logo" /></div>
 	<Nav />
 </header>
 
