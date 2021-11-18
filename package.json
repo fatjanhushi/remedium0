@@ -18,8 +18,5 @@
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.42.6"
   },
-  "type": "module",
-  "dependencies": {
-    "netlify-cms-app": "^2.15.59"
-  }
+  "type": "module"
 }
