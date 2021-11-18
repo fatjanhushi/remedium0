@@ -1,6 +1,11 @@
 <script>
-	import Header from '../components/Header.svelte';
+	import Header from '../components/Header.svelte'
+	export let titulli
 </script>
+
+<svelte:head>
+	<title>{titulli}</title>
+</svelte:head>
 
 <div class="container">
 	<Header />
