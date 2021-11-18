@@ -1,5 +1,8 @@
+---
+title: THE TItle
+---
 <script>
-let title = 'World'
+let name = 'World'
 let x = 60
 </script>
 
@@ -11,7 +14,7 @@ h1 {
 
 # Hello {name}
 
-# welcome
+# welcome TEST
 
 ```js
 // Syntax Highlighting from highlight.js
