@@ -19,16 +19,16 @@ collections:
         name: 'home'
         file: '/src/routes/home.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
       - label: 'About'
         name: 'about'
         file: '/src/routes/about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'post'
-    label: 'Post'
+  - name: 'posts'
+    label: 'Posts'
     folder: 'src/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'

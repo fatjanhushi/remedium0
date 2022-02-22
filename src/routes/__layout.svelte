@@ -1,11 +1,6 @@
 <script>
 	import Header from '../components/Header.svelte'
-	export let titulli
 </script>
-
-<svelte:head>
-	<title>{titulli}</title>
-</svelte:head>
 
 <div class="container">
 	<Header />
@@ -19,7 +14,6 @@
 	.container {
 		max-width: 70rem;
 		margin-inline: auto;
-		background: red;
 	}
 	footer {
 		background-color: blueviolet;
