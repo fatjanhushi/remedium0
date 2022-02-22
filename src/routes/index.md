@@ -1,5 +1,5 @@
 ---
-titulli: 'Index page title'
+title: 'Index page title'
 ---
 
 <h1>Welcome to SvelteKit</h1>
