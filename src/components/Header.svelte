@@ -11,9 +11,11 @@
 	header {
 		display: flex;
 		flex-direction: column;
-		background-color: white;
 		text-align: center;
 		padding: 0;
+	}
+	header > div {
+		border-radius: 1rem;
 	}
 	img {
 		max-width: 100%;

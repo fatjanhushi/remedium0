@@ -1,12 +1,13 @@
 <script>
 	import Header from '../components/Header.svelte'
+	import '../app.css'
 </script>
 
 <div class="container">
 	<Header />
 	<slot />
 	<footer>
-		<p>Footer</p>
+		<p>&copy Copyright {new Date().getFullYear()}</p>
 	</footer>
 </div>
 
@@ -16,6 +17,11 @@
 		margin-inline: auto;
 	}
 	footer {
-		background-color: blueviolet;
+		background-color: #3257a8;
+		color: #fff;
+		font-weight: 500;
+		letter-spacing: 0.2em;
+		text-align: center;
+		border-radius: 1rem;
 	}
 </style>
