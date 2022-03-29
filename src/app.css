@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+h1,
+h2,
+h3,
+p,
+a,
+div,
+span {
+	font-family: 'Poppins', sans-serif;
+}

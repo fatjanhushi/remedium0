@@ -1,3 +1,9 @@
-<svelte:head>
-	<title>Blog</title>
-</svelte:head>
+<script>
+	export let posts
+</script>
+
+<h1>Blog page</h1>
+
+{#each posts as post}
+	<p>{post}</p>
+{/each}

@@ -1,4 +1,9 @@
+<script>
+	const title = 'Remedium - About'
+</script>
+
 <svelte:head>
-	<title>About page</title>
+	<title>{title}</title>
 </svelte:head>
-<h1>about page</h1>
+
+<h1>about</h1>

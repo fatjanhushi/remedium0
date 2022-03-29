@@ -1,9 +1,13 @@
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
-	}
-};
+import { mdsvex } from 'mdsvex'
+import mdsvexConfig from './mdsvex.config.js'
+import adapter from '@sveltejs/adapter-netlify'
 
-export default config;
+export default {
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
+
+	kit: {
+		adapter: adapter()
+	},
+
+	preprocess: [mdsvex(mdsvexConfig)]
+}
