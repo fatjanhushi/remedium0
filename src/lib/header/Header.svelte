@@ -1,16 +1,32 @@
 <script>
 	import { page } from '$app/stores'
+	import logo from './logo.svg'
 </script>
 
-<nav>
-	<ul>
-		<li class:selected={$page.url.pathname === '/'}><a href="/">Home</a></li>
-		<li class:selected={$page.url.pathname === '/blog'}><a href="/blog">Blog</a></li>
-		<li class:selected={$page.url.pathname === '/about'}><a href="/about">About</a></li>
-	</ul>
-</nav>
+<header>
+	<div><img src={logo} alt="Remedium Logo" /></div>
+	<nav>
+		<ul>
+			<li class:selected={$page.url.pathname === '/'}><a href="/">Home</a></li>
+			<li class:selected={$page.url.pathname === '/blog'}><a href="/blog">Blog</a></li>
+			<li class:selected={$page.url.pathname === '/about'}><a href="/about">About</a></li>
+		</ul>
+	</nav>
+</header>
 
 <style>
+	header {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+	}
+	header > div {
+		border-radius: 1rem;
+	}
+	img {
+		max-width: 100%;
+	}
 	:root {
 		--selected-color: #dc3f4d;
 		--color1: #3257a8;
