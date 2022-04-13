@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import '@fontsource/poppins';
 
 h1,
 h2,
@@ -7,5 +7,5 @@ p,
 a,
 div,
 span {
-	font-family: 'Poppins', sans-serif;
+	font-family: Poppins, sans-serif;
 }
