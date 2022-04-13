@@ -19,5 +19,8 @@
 		"prettier-plugin-svelte": "^2.6.0",
 		"svelte": "^3.46.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fontsource/poppins": "^4.5.5"
+	}
 }
