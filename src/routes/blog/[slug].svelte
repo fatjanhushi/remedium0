@@ -9,14 +9,24 @@
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
 	export const prerender = true
+
+	/** @type {import('./[slug]').Load} */
+	export async function load({ params }) {
+		const post = await import(`../../posts/${params.slug}.md`)
+		console.log(post)
+
+		return {
+			props: {
+				postContent: post.default,
+				postTitle: post.metadata.title
+			}
+		}
+	}
 </script>
 
 <script>
-	const title = 'Remedium - About'
+	export let postContent, postTitle
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
-
-<h1>about</h1>
+<h1>{postTitle}</h1>
+<p>{postContent}</p>

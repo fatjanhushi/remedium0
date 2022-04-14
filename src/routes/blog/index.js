@@ -1,3 +1,4 @@
+/** @type {import('./index').RequestHandler} */
 export const get = async () => {
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('../../posts/*.md')).map(async ([path, resolver]) => {
