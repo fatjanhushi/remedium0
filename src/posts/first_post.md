@@ -2,6 +2,7 @@
 title: First Post
 date: 2021-11-19T10:50:03.906Z
 thumbnail: /uploads/testtttt.jpg
+excerpt: This is the excerpt for the first post
 ---
 
 This is the first post

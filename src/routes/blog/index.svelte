@@ -1,14 +1,21 @@
 <script context="module">
-	import { browser, dev } from '$app/env'
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	export const hydrate = dev
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	export const router = browser
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true
+	export async function load({ params }) {
+		const posts = await Promise.all(
+			Object.entries(import.meta.glob('../../posts/*.md')).map(async ([path, resolver]) => {
+				const { metadata } = await resolver()
+				const slug = path.split('/').pop().slice(0, -3)
+				return { ...metadata, slug }
+			})
+		)
+
+		console.log(posts)
+
+		return {
+			props: {
+				posts
+			}
+		}
+	}
 </script>
 
 <script>
@@ -18,5 +25,6 @@
 <h1>Blog page</h1>
 
 {#each posts as post}
-	<p>{post.title}</p>
+	<h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3>
+	<p>{post.excerpt}</p>
 {/each}
